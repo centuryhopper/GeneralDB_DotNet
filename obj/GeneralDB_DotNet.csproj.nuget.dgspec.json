@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/GeneralDB_DotNet.csproj": {}
+  },
+  "projects": {
+    "/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/GeneralDB_DotNet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/GeneralDB_DotNet.csproj",
+        "projectName": "GeneralDB_DotNet",
+        "projectPath": "/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/GeneralDB_DotNet.csproj",
+        "packagesPath": "/home/leo_zhang/.nuget/packages/",
+        "outputPath": "/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/leo_zhang/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.10, 6.0.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
