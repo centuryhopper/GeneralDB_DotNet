@@ -1,26 +1,26 @@
+using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
 
-namespace Models;
+namespace PorfolioDB.Models;
 
 // make sure that we dont have exceptions like "Element 'Id' does not match any field or property of class"
-[BsonIgnoreExtraElements]
+// [BsonIgnoreExtraElements]
 public class PortfolioContactModel
 {
-    // [BsonId]
-    // [BsonRepresentation(BsonType.ObjectId)]
-    // public string id { get; set; }
-    public ObjectId _id {get;set;}
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    [BsonElement("id")]
+    public string? Id { get; set; }
 
-    public string name { get; set; }
-    public string email { get; set; }
-    public string subject { get; set; }
-    public string message { get; set; }
+    public string? name { get; set; }
+    public string? email { get; set; }
+    public string? subject { get; set; }
+    public string? message { get; set; }
 
-    public PortfolioContactModel(string name, string email, string subject, string message)
+    public override string ToString()
     {
-        this.name = name; this.email = email;
-        this.subject = subject; this.message = message;
+        return $"Id: {Id}, name: {name}, email: {email}, subject: {subject}, message: {message}";
     }
-
 }

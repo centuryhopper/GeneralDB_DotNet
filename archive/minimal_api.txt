@@ -1,0 +1,44 @@
+Just copy & paste the code below into Program.cs to use it
+
+// app.MapGet("/", () => {
+
+//     // System.Console.WriteLine("hello there");
+//     return Results.Ok("This is a portfolio api");
+// });
+
+// app.MapGet("/api/portfolio", async (PortfolioContactService portfolioService) => {
+//     // var res = await portfolioService.Get();
+//     // System.Console.WriteLine(res.Count);
+//     // res.ForEach(i => System.Console.WriteLine(i));
+//     // return Results.Ok();
+//     return await portfolioService.Get();
+// });
+
+// app.MapGet("/api/portfolio/{id}", async (PortfolioContactService portfolioService, string id) => {
+//     var doc = await portfolioService.Get(id);
+//     return doc is null ? Results.NotFound() : Results.Ok(doc);
+// });
+
+// app.MapPost("/api/portfolio", async (PortfolioContactService portfolioService, PortfolioContactModel model) => {
+//     if (model is null) return Results.BadRequest("Model is null");
+//     await portfolioService.Create(model);
+//     return Results.Ok($"successfully inserted model : {model}");
+// });
+
+// app.MapPut("/api/portfolio/{id}", async (PortfolioContactService service, string id, PortfolioContactModel model) => {
+
+//     var doc = await service.Get(id);
+//     if (doc is null) return Results.NotFound();
+//     model.Id = doc.Id;
+//     await service.Update(id, model);
+
+//     return Results.Ok();
+// });
+
+
+// app.MapDelete("/api/portfolio/{id}", async (PortfolioContactService service, string id) => {
+//     var doc = await service.Get(id);
+//     if (doc is null) return Results.NotFound();
+//     await service.Remove(doc.Id!);
+//     return Results.NoContent();
+// });

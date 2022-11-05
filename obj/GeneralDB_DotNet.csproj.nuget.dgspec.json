@@ -38,13 +38,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "DotNetEnv": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.18.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "microsoft.extensions.options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

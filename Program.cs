@@ -1,42 +1,40 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
-// how to change console app to web app: https://www.youtube.com/watch?v=zfIRTY1dNm8&ab_channel=TheAverageDeveloperhttps://www.youtube.com/watch?v=zfIRTY1dNm8&ab_channel=TheAverageDeveloper
+﻿// how to change console app to web app:
+// https://www.youtube.com/watch?v=zfIRTY1dNm8&ab_channel=TheAverageDeveloperhttps://www.youtube.com/watch?v=zfIRTY1dNm8&ab_channel=TheAverageDeveloper
+
 // packages added:
-// dotnet add package MongoDB.Driver --version 2.18.0
-// dotnet add package DotNetEnv
+// dotnet add package MongoDB.Driver
+// dotnet add package microsoft.extensions.options
+// dotnet add package Swashbuckle.AspNetCore
 
 
-using System;
-using MongoDB.Driver;
-using Models;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using PortfolioDB.Settings;
+using PortfolioDB.Services;
 
-DotNetEnv.Env.Load();
+var builder = WebApplication.CreateBuilder(args);
 
-// System.Console.WriteLine(Environment.GetEnvironmentVariable("PORT"));
-// System.Console.WriteLine(Environment.GetEnvironmentVariable("MONGO_URI"));
+// for swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-var collectionName = "PortfolioContact";
-var client = new MongoClient(Environment.GetEnvironmentVariable("MONGO_URI"));
+// looks for all controllers and adds them to the builder for the app
+builder.Services.AddControllers();
 
-// sanity check
-// var dbs = client.ListDatabaseNames().ToList();
-// dbs.ForEach(x => System.Console.WriteLine(x));
+// dependency injection container
+builder.Services.Configure<PortfolioDBSettings>(builder.Configuration.GetSection("PortfolioContactSettings"));
 
-// get collection and model
-var portfolioCollection = client.GetDatabase("PersonalDB").GetCollection<PortfolioContactModel>(collectionName);
+// at this point, we can now inject PortfolioContactSettings to any class that needs it
+builder.Services.AddSingleton<PortfolioContactService>();
 
-portfolioCollection.InsertOne(new PortfolioContactModel("a","b","c","d"));
+var app = builder.Build();
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
-FilterDefinition<PortfolioContactModel> filter = Builders<PortfolioContactModel>.Filter.Eq("name", "a");
- 
-foreach (var result in portfolioCollection.Find(filter).ToList())
-{
-    System.Console.WriteLine($"{result.name}, {result.email}");
-    // System.Console.WriteLine(String.Join(", ", ));
-}
-
+// for swagger
+app.UseSwaggerUI();
+app.UseSwagger(x => x.SerializeAsV2 = true);
 
 
-// var app = WebApplication.CreateBuilder(args).Build();
-// app.MapGet("/", () => "This is a minimal api");
-// app.Run();
+app.Run();
