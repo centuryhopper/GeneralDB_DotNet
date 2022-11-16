@@ -1,12 +1,12 @@
 
-namespace PortfolioDB.Settings;
+using System.Collections.Generic;
 
-public class PortfolioDBSettings
+namespace GeneralDB.Settings;
+
+public class GeneralDBSettings
 {
     public string? connectionString { get; set; }
     public string? DatabaseName { get; set; }
-    public string? collectionName { get; set; }
-
-
+    public Dictionary<string,string>? collectionName { get; set; }
 
 }

@@ -2,7 +2,6 @@
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/GeneralDB_DotNet.deps.json
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/GeneralDB_DotNet.runtimeconfig.json
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/GeneralDB_DotNet.dll
-/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/ref/GeneralDB_DotNet.dll
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/GeneralDB_DotNet.pdb
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/GeneralDB_DotNet.csproj.AssemblyReference.cache
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/GeneralDB_DotNet.GeneratedMSBuildEditorConfig.editorconfig
@@ -35,3 +34,9 @@
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/GeneralDB_DotNet.MvcApplicationPartsAssemblyInfo.cs
+/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/staticwebassets/msbuild.GeneralDB_DotNet.Microsoft.AspNetCore.StaticWebAssets.props
+/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/staticwebassets/msbuild.build.GeneralDB_DotNet.props
+/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.GeneralDB_DotNet.props
+/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.GeneralDB_DotNet.props
+/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/staticwebassets.pack.json
+/home/leo_zhang/Documents/GitHub/GeneralDB_DotNet/obj/Debug/net6.0/refint/GeneralDB_DotNet.dll
